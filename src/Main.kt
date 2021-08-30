@@ -1,7 +1,7 @@
 fun main() {
     val list = listOf(1, 2, 3, 4, 5)
 
-    list.forEachContinue { x ->
+    list.forEachBreakable { x ->
         if (x % 2 == 0)
             Continue
 
@@ -10,7 +10,7 @@ fun main() {
     // Output: 135
 
     println()
-    list.forEachContinue { x ->
+    list.forEachBreakable { x ->
         if (x % 2 == 0)
             Break
 
@@ -19,11 +19,11 @@ fun main() {
     // Output: 1
 
     println()
-    list.forEachContinue { x ->
+    list.forEachBreakable { x ->
         if(x % 2 == 0)
             Continue
 
-        list.forEachContinue { y ->
+        list.forEachBreakable { y ->
             if(y == 2)
                 Continue
 

@@ -14,7 +14,7 @@ class ForEachScope {
 
 }
 
-fun <T> Iterable<T>.forEachContinue(block: ForEachScope.(T) -> Unit) {
+fun <T> Iterable<T>.forEachBreakable(block: ForEachScope.(T) -> Unit) {
     val scope = ForEachScope()
     try {
         forEach {
