@@ -22,7 +22,7 @@ Pretty straightforward. But what if we want to use ```list.forEach()``` instead?
 ```kotlin
 list.forEach {x ->
     if (x % 2 == 0)
-        return@forEach
+        continue@forEach
 
     print(x)
 }
